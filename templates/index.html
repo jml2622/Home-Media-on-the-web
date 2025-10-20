@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinja Demo</title>
+</head>
+<body>
+
+    <h1>Hello, {{ user_name }}!</h1>
+
+    {% if items %}
+        <p>Here are your items:</p>
+        <ul>
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have no items.</p>
+    {% endif %}
+
+</body>
+</html>

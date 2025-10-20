@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+<title>Music</title>
+<!-- Link to styling  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/
+bootstrap/4.5.2/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+<!-- HTML content -->
+<script src=script.js></script>
+
+</head>
+<body>
+
+<div class = 'topnav'>
+    <h1>Home</h1>   
+</div>
+
+<div class="slideshow-container">
+    {% for item in slideshow_items}
+        <div class = "mySlides fade">
+            <div class ="numbertext">1/4</div>
+
+            <img src="item.image_path" style = "width:100%">
+            <div class = "text"> 
+                <strong>{{item.title}}</strong>
+            </div>
+        </div>
+    </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
